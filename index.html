@@ -39,15 +39,16 @@
       <section id="hero" class="hero">
         <div class="container">
           <div class="hero-content">
-            <p class="eyebrow">New single out now</p>
-            <h1>Dive into the midnight bloom</h1>
-            <p>
-              Dreamy shoegaze textures, thunderous drums, and melodies that linger long
-              after the last chord fades. Drowning Violets paints nights in ultraviolet.
+            <p class="eyebrow" data-hero-tagline>Official bio update in progress</p>
+            <h1 data-hero-headline>Drowning Violets</h1>
+            <p data-hero-description>
+              We're gathering verified copy from Spotify and TikTok so the story you read
+              here matches the band's official profiles. Edit <code>band-data.json</code>
+              once you have the latest details.
             </p>
-            <div class="cta-group">
-              <a class="btn primary" href="#music">Listen</a>
-              <a class="btn secondary" href="#shows">See us live</a>
+            <div class="cta-group" data-hero-ctas>
+              <a class="btn primary" data-hero-primary href="#music">Listen</a>
+              <a class="btn secondary" data-hero-secondary href="#contact">Contact</a>
             </div>
           </div>
           <div class="hero-art" aria-hidden="true">
@@ -62,24 +63,24 @@
         <div class="container two-column">
           <div>
             <h2>Who we are</h2>
-            <p>
-              Drowning Violets is a four-piece from Portland blending shoegaze haze with
-              post-punk grit. Vocalist Mira Laurent leads shimmering guitars, tidal synths,
-              and a rhythm section that never lets you touch the ground.
-            </p>
-            <p>
-              The band formed in 2019 and quickly became known for immersive live shows and
-              cinematic soundscapes. Influences range from Slowdive and Cocteau Twins to
-              modern torchbearers like Japanese Breakfast.
-            </p>
+            <div class="about-copy" data-about-bio>
+              <p>
+                Replace this copy with the biography from Spotify for Artists or your press
+                kit so fans and promoters see the same story everywhere.
+              </p>
+            </div>
+            <div class="card about-highlights" data-about-highlights>
+              <h3>Highlights</h3>
+              <ul>
+                <li>Document your monthly listeners, notable playlists, or TikTok milestones.</li>
+                <li>Add press quotes or achievements once you verify them.</li>
+              </ul>
+            </div>
           </div>
           <div class="card">
             <h3>Band lineup</h3>
-            <ul class="lineup">
-              <li><span>Mira Laurent</span><span>Vocals &amp; guitar</span></li>
-              <li><span>Elio Hart</span><span>Lead guitar</span></li>
-              <li><span>Asha Ren</span><span>Synths</span></li>
-              <li><span>Jonah Vale</span><span>Drums</span></li>
+            <ul class="lineup" data-lineup>
+              <li class="empty-state">Add each member's name and role in <code>band-data.json</code>.</li>
             </ul>
           </div>
         </div>
@@ -88,118 +89,71 @@
       <section id="music" class="music">
         <div class="container">
           <h2>Latest music</h2>
-          <div class="release-grid">
-            <article class="release">
-              <div class="release-art">Bleed Electric</div>
-              <div>
-                <h3>Bleed Electric</h3>
-                <p>New single from the upcoming EP <em>Ultraviolet Hour</em>.</p>
-                <div class="streaming">
-                  <a href="#" class="badge">Spotify</a>
-                  <a href="#" class="badge">Apple Music</a>
-                  <a href="#" class="badge">Bandcamp</a>
-                </div>
-              </div>
-            </article>
-            <article class="release">
-              <div class="release-art">Luminous</div>
-              <div>
-                <h3>Luminous</h3>
-                <p>The breakout single that set the tone for our nocturnal sound.</p>
-                <div class="streaming">
-                  <a href="#" class="badge">Spotify</a>
-                  <a href="#" class="badge">YouTube</a>
-                  <a href="#" class="badge">SoundCloud</a>
-                </div>
-              </div>
-            </article>
-            <article class="release">
-              <div class="release-art">Violet Hour</div>
-              <div>
-                <h3>Violet Hour EP</h3>
-                <p>Five tracks of cascading guitars and neon synth lines.</p>
-                <div class="streaming">
-                  <a href="#" class="badge">Bandcamp</a>
-                  <a href="#" class="badge">Vinyl</a>
-                  <a href="#" class="badge">Cassette</a>
-                </div>
-              </div>
-            </article>
+          <div class="release-grid" data-releases>
+            <p class="empty-state">Add release details with Spotify, Apple Music, or TikTok audio links.</p>
           </div>
         </div>
+        <template id="release-template">
+          <article class="release">
+            <div class="release-art" data-release-art></div>
+            <div>
+              <h3 data-release-title></h3>
+              <p data-release-description></p>
+              <div class="streaming" data-release-links></div>
+            </div>
+          </article>
+        </template>
       </section>
 
       <section id="shows" class="shows">
         <div class="container">
           <h2>Upcoming shows</h2>
-          <ul class="show-list">
-            <li>
-              <span class="date">Aug 24</span>
-              <span class="details">
-                <strong>Neon Harbor Festival</strong>
-                <span>Seattle, WA</span>
-              </span>
-              <a href="#" class="btn tertiary">Tickets</a>
-            </li>
-            <li>
-              <span class="date">Sep 14</span>
-              <span class="details">
-                <strong>The Violet Room</strong>
-                <span>Portland, OR</span>
-              </span>
-              <a href="#" class="btn tertiary">Tickets</a>
-            </li>
-            <li>
-              <span class="date">Oct 5</span>
-              <span class="details">
-                <strong>Midnight Bloom Tour</strong>
-                <span>San Francisco, CA</span>
-              </span>
-              <a href="#" class="btn tertiary">Tickets</a>
-            </li>
+          <ul class="show-list" data-shows>
+            <li class="empty-state">Post confirmed tour dates once they're announced on TikTok or Songkick.</li>
           </ul>
         </div>
+        <template id="show-template">
+          <li>
+            <span class="date" data-show-date></span>
+            <span class="details">
+              <strong data-show-venue></strong>
+              <span data-show-location></span>
+            </span>
+            <a class="btn tertiary" data-show-link>Tickets</a>
+          </li>
+        </template>
       </section>
 
       <section id="gallery" class="gallery">
         <div class="container">
           <h2>Gallery</h2>
-          <div class="gallery-grid">
-            <figure class="gallery-item">
-              <div class="image" aria-hidden="true"></div>
-              <figcaption>Live at the Nebula Lounge</figcaption>
-            </figure>
-            <figure class="gallery-item">
-              <div class="image" aria-hidden="true"></div>
-              <figcaption>Tracking synth layers for <em>Ultraviolet Hour</em></figcaption>
-            </figure>
-            <figure class="gallery-item">
-              <div class="image" aria-hidden="true"></div>
-              <figcaption>Backstage at the Violet Room</figcaption>
-            </figure>
-            <figure class="gallery-item">
-              <div class="image" aria-hidden="true"></div>
-              <figcaption>Late-night writing session</figcaption>
+          <div class="gallery-grid" data-gallery>
+            <figure class="gallery-item empty-state">
+              <figcaption>Swap in press photos or TikTok stills once you have usage rights.</figcaption>
             </figure>
           </div>
         </div>
+        <template id="gallery-template">
+          <figure class="gallery-item">
+            <div class="image" data-gallery-image aria-hidden="true"></div>
+            <figcaption data-gallery-caption></figcaption>
+          </figure>
+        </template>
       </section>
 
       <section id="contact" class="contact">
         <div class="container two-column">
           <div>
             <h2>Stay in the loop</h2>
-            <p>
-              Booking, press, or just want to say hi? Drop us a note and we'll get back to
-              you between tour rehearsals.
+            <p data-contact-copy>
+              Keep booking, press, and fan outreach aligned with the details you publish on
+              Spotify and TikTok. Update the contact list once you've confirmed addresses.
             </p>
-            <ul class="contact-links">
-              <li><a href="mailto:booking@drowningviolets.com">booking@drowningviolets.com</a></li>
-              <li><a href="mailto:press@drowningviolets.com">press@drowningviolets.com</a></li>
-              <li><a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a></li>
+            <ul class="contact-links" data-contact-links>
+              <li class="empty-state">Add your booking and press emails in <code>band-data.json</code>.</li>
             </ul>
           </div>
-          <form class="contact-form">
+          <form class="contact-form" data-contact-form>
             <label>
               Name
               <input type="text" name="name" placeholder="Your name" required />
@@ -210,7 +164,12 @@
             </label>
             <label>
               Message
-              <textarea name="message" rows="4" placeholder="Let's make something beautiful." required></textarea>
+              <textarea
+                name="message"
+                rows="4"
+                placeholder="Share a note and we'll reply once we see it."
+                required
+              ></textarea>
             </label>
             <button type="submit" class="btn primary">Send message</button>
           </form>
@@ -220,11 +179,12 @@
 
     <footer class="site-footer">
       <div class="container">
-        <p>&copy; <span id="year"></span> Drowning Violets. All rights reserved.</p>
-        <div class="socials">
-          <a href="https://instagram.com" aria-label="Instagram">IG</a>
-          <a href="https://youtube.com" aria-label="YouTube">YT</a>
-          <a href="https://bandcamp.com" aria-label="Bandcamp">BC</a>
+        <p>
+          &copy; <span id="year"></span> <span data-footer-name>Drowning Violets</span>. All rights
+          reserved.
+        </p>
+        <div class="socials" data-footer-socials>
+          <a class="empty-state" href="#">Add official social links</a>
         </div>
       </div>
     </footer>
