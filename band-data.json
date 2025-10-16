@@ -1,0 +1,49 @@
+{
+  "bandName": "Drowning Violets",
+  "hero": {
+    "tagline": "Pulling official stats from Spotify soon",
+    "headline": "Drowning Violets",
+    "description": "Update this text with the short bio or pitch you use on Spotify and TikTok so listeners get the same message everywhere.",
+    "primaryCta": {
+      "label": "Listen on Spotify",
+      "url": ""
+    },
+    "secondaryCta": {
+      "label": "Follow on TikTok",
+      "url": ""
+    }
+  },
+  "about": {
+    "paragraphs": [
+      "Paste the official biography from Spotify for Artists, your EPK, or TikTok profile here.",
+      "If you have follower counts, hometown details, or release highlights, add them below once verified."
+    ],
+    "highlights": [
+      "Add monthly listeners, playlist placements, or TikTok milestones once confirmed.",
+      "Include notable press quotes or awards after fact-checking."
+    ],
+    "members": []
+  },
+  "music": {
+    "releases": []
+  },
+  "shows": {
+    "events": []
+  },
+  "gallery": {
+    "items": []
+  },
+  "contact": {
+    "copy": "Keep booking, press, and fan contact details consistent with what you share on Spotify and TikTok.",
+    "emails": [],
+    "links": []
+  },
+  "social": {
+    "spotify": "",
+    "tiktok": "",
+    "instagram": "",
+    "youtube": "",
+    "bandcamp": "",
+    "facebook": ""
+  }
+}

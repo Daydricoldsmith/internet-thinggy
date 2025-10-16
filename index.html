@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drowning Violets | Official Site</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700&family=Work+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a class="logo" href="#hero">Drowning Violets</a>
+        <nav class="main-nav" aria-label="Primary">
+          <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+          <ul id="primary-nav">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#music">Music</a></li>
+            <li><a href="#shows">Shows</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <p class="eyebrow" data-hero-tagline>Official bio update in progress</p>
+            <h1 data-hero-headline>Drowning Violets</h1>
+            <p data-hero-description>
+              We're gathering verified copy from Spotify and TikTok so the story you read
+              here matches the band's official profiles. Edit <code>band-data.json</code>
+              once you have the latest details.
+            </p>
+            <div class="cta-group" data-hero-ctas>
+              <a class="btn primary" data-hero-primary href="#music">Listen</a>
+              <a class="btn secondary" data-hero-secondary href="#contact">Contact</a>
+            </div>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="orb"></div>
+            <div class="orb"></div>
+            <div class="orb"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about">
+        <div class="container two-column">
+          <div>
+            <h2>Who we are</h2>
+            <div class="about-copy" data-about-bio>
+              <p>
+                Replace this copy with the biography from Spotify for Artists or your press
+                kit so fans and promoters see the same story everywhere.
+              </p>
+            </div>
+            <div class="card about-highlights" data-about-highlights>
+              <h3>Highlights</h3>
+              <ul>
+                <li>Document your monthly listeners, notable playlists, or TikTok milestones.</li>
+                <li>Add press quotes or achievements once you verify them.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Band lineup</h3>
+            <ul class="lineup" data-lineup>
+              <li class="empty-state">Add each member's name and role in <code>band-data.json</code>.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="music" class="music">
+        <div class="container">
+          <h2>Latest music</h2>
+          <div class="release-grid" data-releases>
+            <p class="empty-state">Add release details with Spotify, Apple Music, or TikTok audio links.</p>
+          </div>
+        </div>
+        <template id="release-template">
+          <article class="release">
+            <div class="release-art" data-release-art></div>
+            <div>
+              <h3 data-release-title></h3>
+              <p data-release-description></p>
+              <div class="streaming" data-release-links></div>
+            </div>
+          </article>
+        </template>
+      </section>
+
+      <section id="shows" class="shows">
+        <div class="container">
+          <h2>Upcoming shows</h2>
+          <ul class="show-list" data-shows>
+            <li class="empty-state">Post confirmed tour dates once they're announced on TikTok or Songkick.</li>
+          </ul>
+        </div>
+        <template id="show-template">
+          <li>
+            <span class="date" data-show-date></span>
+            <span class="details">
+              <strong data-show-venue></strong>
+              <span data-show-location></span>
+            </span>
+            <a class="btn tertiary" data-show-link>Tickets</a>
+          </li>
+        </template>
+      </section>
+
+      <section id="gallery" class="gallery">
+        <div class="container">
+          <h2>Gallery</h2>
+          <div class="gallery-grid" data-gallery>
+            <figure class="gallery-item empty-state">
+              <figcaption>Swap in press photos or TikTok stills once you have usage rights.</figcaption>
+            </figure>
+          </div>
+        </div>
+        <template id="gallery-template">
+          <figure class="gallery-item">
+            <div class="image" data-gallery-image aria-hidden="true"></div>
+            <figcaption data-gallery-caption></figcaption>
+          </figure>
+        </template>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="container two-column">
+          <div>
+            <h2>Stay in the loop</h2>
+            <p data-contact-copy>
+              Keep booking, press, and fan outreach aligned with the details you publish on
+              Spotify and TikTok. Update the contact list once you've confirmed addresses.
+            </p>
+            <ul class="contact-links" data-contact-links>
+              <li class="empty-state">Add your booking and press emails in <code>band-data.json</code>.</li>
+            </ul>
+          </div>
+          <form class="contact-form" data-contact-form>
+            <label>
+              Name
+              <input type="text" name="name" placeholder="Your name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" placeholder="you@example.com" required />
+            </label>
+            <label>
+              Message
+              <textarea
+                name="message"
+                rows="4"
+                placeholder="Share a note and we'll reply once we see it."
+                required
+              ></textarea>
+            </label>
+            <button type="submit" class="btn primary">Send message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          &copy; <span id="year"></span> <span data-footer-name>Drowning Violets</span>. All rights
+          reserved.
+        </p>
+        <div class="socials" data-footer-socials>
+          <a class="empty-state" href="#">Add official social links</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
